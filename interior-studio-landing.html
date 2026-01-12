@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sara Abdelsalam Designs - Global Interior Design Studio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #2c2c2c;
+    overflow-x: hidden;
+}
+
+/* NAV */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c2c2c;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(245,245,240,0.65), rgba(232,232,220,0.65)),
+        url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 72px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.cta-button {
+    padding: 18px 45px;
+    background: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border: 2px solid #1a1a1a;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: #1a1a1a;
+}
+
+/* STATS */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    padding: 100px 60px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 54px;
+    color: #c9a961;
+}
+
+.stat-label {
+    text-transform: uppercase;
+    color: #666;
+}
+
+/* PROJECTS */
+.projects {
+    padding: 100px 60px;
+    background: #fafaf8;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 80px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Project images */
+.project-1 { background-image: url("images/1762222987488.jpeg"); }
+.project-2 { background-image: url("images/1762222987488.jpeg"); }
+.project-3 { background-image: url("images/1762222987488.jpeg"); }
+.project-4 { background-image: url("images/1762222987488.jpeg"); }
+.project-5 { background-image: url("images/1762222987488.jpeg"); }
+.project-6 { background-image: url("images/1762222987488.jpeg"); }
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26,26,26,0.85);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.project-overlay p {
+    color: #c9a961;
+    text-transform: uppercase;
+}
+
+/* CTA */
+.cta-section {
+    padding: 120px 60px;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: white;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.cta-button-light {
+    padding: 18px 45px;
+    background: white;
+    color: #1a1a1a;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* FOOTER */
+footer {
+    padding: 60px;
+    background: #0a0a0a;
+    color: #999;
+    text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 42px; }
+    .stats { grid-template-columns: repeat(2,1fr); }
+    .project-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+    <div class="logo">Sara Abdelsalam Designs</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <div>
+        <h1>Global Design Excellence</h1>
+        <p>Transforming spaces across all continents</p>
+        <a href="#contact" class="cta-button">Start Your Project</a>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat-item"><div class="stat-number">60+</div><div class="stat-label">Projects</div></div>
+    <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Countries</div></div>
+    <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Continents</div></div>
+    <div class="stat-item"><div class="stat-number">6+</div><div class="stat-label">Years</div></div>
+</section>
+
+<section class="projects" id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">International excellence in every detail</p>
+
+    <div class="project-grid">
+        <div class="project-card project-1"><div class="project-overlay"><h3>Tokyo Residence</h3><p>Asia</p></div></div>
+        <div class="project-card project-2"><div class="project-overlay"><h3>Manhattan Penthouse</h3><p>USA</p></div></div>
+        <div class="project-card project-3"><div class="project-overlay"><h3>Dubai Villa</h3><p>UAE</p></div></div>
+        <div class="project-card project-4"><div class="project-overlay"><h3>Paris Apartment</h3><p>France</p></div></div>
+        <div class="project-card project-5"><div class="project-overlay"><h3>Sydney Harbor</h3><p>Australia</p></div></div>
+        <div class="project-card project-6"><div class="project-overlay"><h3>São Paulo Estate</h3><p>Brazil</p></div></div>
+    </div>
+</section>
+
+<section class="cta-section" id="contact">
+    <h2>Ready to Transform Your Space?</h2>
+    <p>Let’s create something extraordinary</p>
+    <a href="mailto:hello@sara-designs.com" class="cta-button-light">Get In Touch</a>
+</section>
+
+<footer>
+    <p>© 2026 Sara Abdelsalam Designs — All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
