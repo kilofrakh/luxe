@@ -211,7 +211,20 @@ footer {
     color: #999;
     text-align: center;
 }
+.cta-section iframe {
+    width: 100%;
+    max-width: 700px; /* optional, limits on desktop */
+    height: 700px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
+/* optional: center the form */
+.cta-section iframe {
+    display: block;
+    margin: 0 auto;
+}
 /* MOBILE */
 @media (max-width: 768px) {
     .nav-links { display: none; }
@@ -263,10 +276,20 @@ footer {
 </section>
 
 <section class="cta-section" id="contact">
-    <h2>Ready to Transform Your Space?</h2>
-    <p>Let’s create something extraordinary</p>
-    <a href="mailto:hello@sara-designs.com" class="cta-button-light">Get In Touch</a>
+    <h2>Start Your Project</h2>
+    <p>Tell us about your space and vision</p>
+
+    <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSetiAYNcaMNTRjBh6GOxwJsaCqFL-QyE9TdDurOUBv89dSA2w/viewform?embedded=true" 
+        width="100%" 
+        height="700" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+        Loading…
+    </iframe>
 </section>
+
 
 <footer>
     <p>© 2026 Sara Abdelsalam Designs — All Rights Reserved</p>
